@@ -2,12 +2,12 @@
 
 **Overview :**
 
-How well a player scores in golf is based on his/her skills in various parts of the game. It takes practice with a specific purpose in mind to score better. This data project will help users predict the stats required in order to shoot a specific score.
+Understanding stats about your golf game can help you improve. They can give you objective feedback about where to pracitce and how to play your game while out on the course. The purpose of this model is to help golfers understand how different stats relate to their final score.
 
 **Function :**
 
-- Input: Score
-- Output: Greens, Putts, Fairways
+- Predict a golfers score based on his/her stats (Input: Putts, Fairways, Greens) (Output: Score)
+- Predict a golfer's stats based on his/her score (Input: Score) (Output: Putts, Greens, Fairways)
 
 **Definitions :**
 
