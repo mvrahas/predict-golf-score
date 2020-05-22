@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 @app.route("/stats-to-score", methods=['GET'])
 
-#http://localhost:5000/stats-to-score?putts=34&fairways=2&greens=5
-
 def returnscore():
+
+
     try:
         putts = int(request.args.get('putts'))
         fairways = int(request.args.get('fairways'))
@@ -17,18 +17,16 @@ def returnscore():
         model = pickle.load(open('./exports/Score.pkl','rb'))
         target_score = model.predict(np.array([[putts, fairways,greens]]))[0]
 
-        return str(target_score)
+        return jsonify(score=target_score)
     except:
         return 'Something went wrong'
 
 
 @app.route("/score-to-stats")
 
-#http://localhost:5000/score-to-stats?score=79
-
 def returnstats():
     try:
-        features = ['Putts','Greens','Fairways']
+        features = ['Putts','Fairways','Greens']
 
         target_stats = []
         target_score = int(request.args.get('score'))
@@ -40,7 +38,7 @@ def returnstats():
             target_stat = model.predict(np.array([target_score]).reshape(-1, 1))
             target_stats.append(target_stat[0])
 
-        return str(target_stats)
+        return jsonify(putts=target_stats[0],fairways=target_stats[1], greens=target_stats[2])
     except:
         return 'Something went wrong'
 
