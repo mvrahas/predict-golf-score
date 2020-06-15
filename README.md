@@ -4,14 +4,30 @@
 
 Understanding stats about your golf game can help you improve. They can give you objective feedback about where to pracitce and how to play your game while out on the course. The purpose of this model is to help golfers understand how different stats relate to their final score.
 
-**Function :**
+The model is wrapped inside a simple Flask web application that can be deployed to Heroku for ease of use. See documentation for how to use the model below...
 
-- Predict a golfers score based on his/her stats (Input: Putts, Fairways, Greens) (Output: Score)
-- Predict a golfer's stats based on his/her score (Input: Score) (Output: Putts, Greens, Fairways)
+**Documentation :**
 
-**Definitions :**
+*Stats to Score*
+Predict a golfers score based on his/her stats (Putts, Fairways, Greens).
 
-- Score (INT): The total number of shots taken in the round.
-- Greens (INT): The number of greens in regulation (out of 18). [More Info](https://www.liveabout.com/what-is-green-in-regulation-gir-1560864)
-- Putts (INT): The total number of putts taken in the round.
-- Fairways (INT): The total number of fairways hit in a round (out of 14 assuming a course with 14 fairways)
+```
+GET {{url}}/stats-to-score?putts=32&fairways=7&greens=4
+
+{
+  "score": 89.60187727842703
+}
+```
+
+*Score to Stats*
+Predict a golfers stats (Putts, Fairways, Greens) based on his/her score.
+
+```
+GET {{url}}/score-to-stats?score=79
+
+{
+  "fairways": 7.292152340471098, 
+  "greens": 8.224321683108784, 
+  "putts": 30.231101484019675
+}
+```
