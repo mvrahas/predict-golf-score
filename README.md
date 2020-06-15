@@ -6,6 +6,8 @@ Understanding stats about your golf game can help you improve. They can give you
 
 The model is wrapped inside a simple Flask web application that can be deployed to Heroku for ease of use. See documentation for how to use the model below...
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 **Documentation :**
 
 *Stats to Score*
