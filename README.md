@@ -14,6 +14,7 @@ Predict a golfers score based on his/her stats (Putts, Fairways, Greens).
 ```
 GET {{url}}/stats-to-score?putts=32&fairways=7&greens=4
 
+-->
 {
   "score": 89.60187727842703
 }
@@ -25,6 +26,7 @@ Predict a golfers stats (Putts, Fairways, Greens) based on his/her score.
 ```
 GET {{url}}/score-to-stats?score=79
 
+-->
 {
   "fairways": 7.292152340471098, 
   "greens": 8.224321683108784, 
