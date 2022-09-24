@@ -8,7 +8,7 @@ My project was featured on Towards Data Science! [View on Medium](https://toward
 
 ## Run The Project
 
-Open the model using Jupyter Notebook. 
+Review the model using Jupyter Notebook. 
 
 -OR-
 
