@@ -1,14 +1,22 @@
-# Golf Game Improvement Model
+# Predict Golf Score
 
-**Overview :**
+## About
 
-Understanding stats about your golf game can help you improve. They can give you objective feedback about where to pracitce and how to play your game while out on the course. The purpose of this model is to help golfers understand how different stats relate to their final score.
+Understanding stats about your golf game can help you improve. This linear regression model (built with Scikit-learn) can predict a golfer's expected score based on their stats, or vice versa. I created this as my final project in a General Assembly boot camp.
 
-The model is wrapped inside a simple Flask web application that can be deployed to Heroku for ease of use. See documentation for how to use the model below...
+My project was featured on Towards Data Science! [View on Medium](https://towardsdatascience.com/scikit-learn-linear-regression-for-predicting-golf-performance-c92f31b69f92)
+
+## Run The Project
+
+Open the model using Jupyter Notebook. 
+
+-OR-
+
+Deploy the model to Heroku and access the functionality using a REST API. Documentation below.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-**Documentation :**
+## Documentation
 
 *Stats to Score*
 Predict a golfers score based on his/her stats (Putts, Fairways, Greens).
